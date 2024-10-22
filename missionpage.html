@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon"
+        href="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGN5dHhzMmF2MGNrdWoxd28wbGU1ZWJ4aDR4bnN2ZzhxOTR1cTcwNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pDn9h4mpzxE85qIbMV/giphy.webp"
+        type="image/x-icon" />
+    <title>ZOOLIE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap');
+
+        body {
+            background: linear-gradient(300deg, #c8e5c0, #ebe4cd, #b6d4d8);
+            background-size: 200% 200%;
+            animation: gradient-animation 12s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+
+        nav {
+            margin: 27px auto 0;
+            position: relative;
+            width: 500px;
+            height: 50px;
+            background-color: #6b796f;
+            border-radius: 8px;
+            font-size: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav .animation { 
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+            border-radius: 8px;
+        }
+
+        a:nth-child(1) {
+            width: 150px;
+        }
+
+        a:nth-child(2) {
+            width: 200px;
+        }
+
+        a:nth-child(3) {
+            width: 100px;
+        }
+
+        a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #79909c;
+        }
+
+        a:nth-child(2):hover~.animation {
+            width: 110px;
+            left: 190px;
+            background-color: #79909c;
+        }
+
+        a:nth-child(3):hover~.animation {
+            width: 170px;
+            left: 330px;
+            background-color: #79909c;
+        }
+
+        p {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #ecf0f1;
+            font-family: 'Cherry Swash', cursive;
+            font-size: 16px;
+        }
+
+         h1 {
+            color: #79909c;
+            text-align: center;
+            font-family: impact;
+            font-size: 50px;
+
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #f7f7e5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 27px;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: helvetica;
+            color: #79876e ;
+        }
+
+        .description {
+            color: #79876e;
+            font-family: helvetica;
+        }
+
+        #leaves {position:relative;top:-50px;width:100%;text-align: right;}
+
+        #leaves i {
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background: linear-gradient(to bottom right, #309900, #005600);
+            transform: skew(20deg);
+            border-radius: 5% 40% 70%;
+            box-shadow: inset 0px 0px 1px #222;
+            border: 1px solid #333;
+            z-index: 1;
+            -webkit-animation: falling 5s 0s infinite;
+        }
+
+        #leaves i:nth-of-type(2n) { -webkit-animation: falling2 5s 0s infinite; }
+        #leaves i:nth-of-type(3n) { -webkit-animation: falling3 5s 0s infinite; }
+
+        #leaves i:before {
+          position: absolute;
+          content: '';
+          top: 117px;
+          right: 9px;
+          height: 27px;
+          width: 32px;
+          transform: rotate(49deg);
+          border-radius: 0% 15% 15% 0%;
+          border-top: 1px solid #222;
+          border-bottom: 1px solid #222;
+          border-left: 0px solid #222;
+          border-right: 1px solid #222;
+          background: linear-gradient(to right, rgba(0,100,0,1), #005600);
+          z-index: 1;
+        }
+
+        #leaves i:after {
+          content: '';
+          height: 125px;
+          width: 10px;
+          background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
+          display: block;
+          transform: rotate(125deg);
+          position: absolute;
+          left: 85px;
+          border-radius:50%;
+        }
+
+
+        #leaves i:nth-of-type(n)    { height:23px; width:30px; }
+        #leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+        #leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+
+        #leaves i:nth-of-type(2n+1)    { height:11px; width:16px; }
+        #leaves i:nth-of-type(2n+1):before { width:4px; height:3px; top:7px; right:0px; }
+        #leaves i:nth-of-type(2n+1):after { width:2px; height:6px; left: 5px; top:1px; }
+
+        #leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
+        #leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
+        #leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
+
+        #leaves i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+        #leaves i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+        #leaves i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+        #leaves i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+        #leaves i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+        #leaves i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+        #leaves i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+        #leaves i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+        #leaves i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+        #leaves i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+        #leaves i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+        #leaves i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+        #leaves i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+        #leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+        #leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+
+        #leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #309900, #005600); }
+        #leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #5e9900, #2b5600); }
+        #leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, #990, #564500); }
+
+        #leaves i:nth-of-type(n)    { opacity: .7;}
+        #leaves i:nth-of-type(3n+1)  { opacity: .5;}
+        #leaves i:nth-of-type(3n+2)  { opacity: .3;}
+
+        #leaves i:nth-of-type(n)    {transform: rotate(180deg);}
+
+
+        #leaves i:nth-of-type(n) { -webkit-animation-timing-function:ease-in-out;}
+
+        @-webkit-keyframes falling {
+
+            0% {
+                -webkit-transform:
+                    translate3d(300,0,0)
+                    rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform:
+                    translate3d(-350px,700px,0)
+                    rotate(90deg);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes falling3 {
+             0% {
+                -webkit-transform:
+                    translate3d(0,0,0)
+                    rotate(-20deg);
+            }
+
+            100% {
+                -webkit-transform:
+                    translate3d(-230px,640px,0)
+                    rotate(-70deg);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes falling2 {
+             0% {
+                -webkit-transform:
+                    translate3d(0,0,0)
+                    rotate(90deg);
+            }
+
+            100% {
+                -webkit-transform:
+                    translate3d(-400px,680px,0)
+                    rotate(0deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="leaves">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i> 
+    </div>
+
+    <nav>
+        <a href="file:///Users/kaitlynalanna/Downloads/zooyey/mainpage1.html">Home</a>
+        <a href="file:///Users/kaitlynalanna/Downloads/zooyey/members.html">Members</a>
+        <a href="file:///Users/kaitlynalanna/Downloads/zooyey/thirdpage.html">Registration</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <header>
+
+    </header>
+
+    <article>
+        <h1>Our Mission</h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="miss1.jpeg">
+                </td>
+                <td>
+                    <div class="title">Volunteer at Animal Shelters</div>
+                    <div class="description">
+                       Our mission is to volunteer at animal shelters and care for animals in need. We help by feeding, walking, grooming, and spending time with pets until they find their forever homes. We want to make a positive difference in the lives of abandoned or abused animals by giving them the love and attention they deserve. Together, we can bring joy to these animals and help them find a loving home.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="miss2.jpeg">
+                </td>
+                <td>
+                    <div class="title">Spread Love</div>
+                    <div class="description">
+                        Our mission is to spread love and compassion for animals everywhere. We aim to raise awareness about animal welfare, advocate for humane treatments, and support initiatives that improve the quality of life for all creatures. Through outreach programs, adoption drives, and educational campaigns, we seek to unite individuals in sharing their affection and care for animals, ultimately creating a society where every being receives the kindness and respect they deserve.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="miss3.jpeg">
+                </td>
+                <td>
+                    <div class="title">Safeguard Animal Habitats</div>
+                    <div class="description">
+                        Our mission is to safeguard animal habitats so wildlife can thrive. We work to conserve nature by using eco-friendly methods, repairing damaged ecosystems, and informing people about why diverse habitats matter. By partnering with the community, we aim to protect these essential places where animals belong. Together, we'll secure a future where all animals can live safely in their natural homes.
+                    </div>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <img src="miss4.jpeg">
+                </td>
+                <td>
+                    <div class="title">Friendly Animal Daycare</div>
+                    <div class="description">
+                        Our mission is to create a friendly animal daycare where pets can feel safe and happy. We provide fun activities for dogs and small animals to keep them active and social. Our caring staff will give each pet the attention they need. We want to be a trusted place for busy pet owners, ensuring their furry friends are well cared for and loved while they’re away.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="miss5.jpeg">
+                </td>
+                <td>
+                    <div class="title">Rescue and Rehab</div>
+                    <div class="description">
+                        We rescue and rehab animals in need, providing a safe space and proper care. We help those who are abandoned, abused, or hurt through thorough rescue operations and medical treatment in supportive settings. By spreading awareness about animal welfare and encouraging good pet parenting, we teach our community to be compassionate towards all creatures. Our goal is to build a kinder world where every animal can enjoy happiness and well-being.
+                </td>
+            </tr>
+        </table>
+        </article>
+
+        <footer style="width: 100%; text-align: center;">
+            <p>
+                <center>
+                    <font style="color: darkolivegreen; size: 15; font-family: geneva; font-weight: bold;">*This website is created specifically for our assignment purposes</font>
+                    <br><br>
+                    <font style="color: rgb(122, 122, 122); size: 15; font-family: monospace;">Copyright © 2024 by Kaitlyn & Hansen</font>
+                </center>
+            </p>
+    </footer>
+    <br>
+    
+</body>
+
+</html>

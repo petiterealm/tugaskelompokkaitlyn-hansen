@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon"
+        href="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGN5dHhzMmF2MGNrdWoxd28wbGU1ZWJ4aDR4bnN2ZzhxOTR1cTcwNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pDn9h4mpzxE85qIbMV/giphy.webp"
+        type="image/x-icon" />
+    <title>ZOOLIE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap');
+
+        body {
+            background: linear-gradient(300deg, #c8e5c0, #ebe4cd, #b6d4d8);
+            background-size: 200% 200%;
+            animation: gradient-animation 12s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+
+        nav {
+            margin: 27px auto 0;
+            position: relative;
+            width: 500px;
+            height: 50px;
+            background-color: #6b796f;
+            border-radius: 8px;
+            font-size: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 50px;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav .animation { 
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+            border-radius: 8px;
+        }
+
+        a:nth-child(1) {
+            width: 150px;
+        }
+
+        a:nth-child(2) {
+            width: 200px;
+        }
+
+        a:nth-child(3) {
+            width: 100px;
+        }
+
+        a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #79909c;
+        }
+
+        a:nth-child(2):hover~.animation {
+            width: 110px;
+            left: 190px;
+            background-color: #79909c;
+        }
+
+        a:nth-child(3):hover~.animation {
+            width: 170px;
+            left: 330px;
+            background-color: #79909c;
+        }
+
+       .container {
+            background-color: #f7f7e5;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 40%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 50px;
+
+        }
+
+        h1 {
+            color: #79909c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2d3748;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin: 10px 0;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #6b796f;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #b54747;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="file:///Users/kaitlynalanna/Downloads/zooyey/mainpage1.html#">Home</a>
+        <a href="file:///Users/kaitlynalanna/Downloads/zooyey/missionpage.html#">Our Mission</a>
+        <a href="#">Members</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+<div class="container">
+        <h1><font face="Impact">Join Our Animal Welfare Community</h1>
+        	<p style="color:#79909c; font-family: helvetica; font-size: 40; text-align: center;" >Welcome! We’re thrilled to have you as a member dedicated to animal welfare and habitat protection. Please fill out the registration form.</p>
+<hr>
+        <form>
+            <div class="form-group">
+                <label for="fullname"><font face="geneva">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="beginner" name="experience" value="beginner">
+                    <label for="beginner">Male</label>
+                    <input type="radio" id="intermediate" name="experience" value="intermediate">
+                    <label for="intermediate">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="availability">Areas of Interest:</label>
+                <select id="availability" name="availability" required>
+                    <option value="">Select your interest</option>
+                    <option value="weekdays">Animal Resque</option>
+                    <option value="weekends">Habitat Conservation</option>
+                    <option value="both">Community Education</option>
+                    <option value="flexible">Volunteering Oppurtunities</option>
+                    <option value="both">Fundraising Events</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>How would you like to receive updates?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fostering" name="interests" value="fostering">
+                    <label for="fostering">Email</label>
+                    <input type="checkbox" id="transport" name="interests" value="transport">
+                    <label for="transport">SMS/Text Messages</label>
+                    <input type="checkbox" id="fundraising" name="interests" value="fundraising">
+                    <label for="fundraising">Phone Calls</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Skills and Experience</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </div>
+        </font>
+        </form>
+    </div>
+
+    <footer style="width: 100%; text-align: center;">
+        <p>
+            <font style="color: darkolivegreen; size: 15; font-family: geneva; font-weight: bold;">*This website is created specifically for our assignment purposes</font>
+            <br><br><br>
+            <font style="color: rgb(122, 122, 122); size: 15; font-family: monospace;">Copyright © 2024 by Kaitlyn & Hansen</font>
+        </p>
+    </footer>
+        <br>
+    
+</body>
+
+</html>
